@@ -1,16 +1,16 @@
-plugins {
-    id 'com.android.application'
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.0'
+    }
 }
 
-android {
-    namespace 'com.example.musalla'
-    compileSdk 33
-
-    defaultConfig {
-        applicationId "com.example.musalla"
-        minSdk 21
-        targetSdk 33
-        versionCode 1
-        versionName "1.0"
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
     }
 }
