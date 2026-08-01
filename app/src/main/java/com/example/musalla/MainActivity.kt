@@ -2,17 +2,16 @@ package com.example.musalla
 
 import android.os.Bundle
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
+import android.app.Activity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         
-        // Simple Screen Text (Directly without layout bug)
         val textView = TextView(this)
         textView.text = "Welcome to Musalla App!"
-        textView.textSize = 24f
-        textView.textAlignment = TextView.TEXT_ALIGNMENT_CENTER
+        textView.textSize = 28f
+        textView.gravity = android.view.Gravity.CENTER
         
         setContentView(textView)
     }
