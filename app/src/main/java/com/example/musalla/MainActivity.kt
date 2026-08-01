@@ -1,18 +1,16 @@
-package com.example.musalla
-
-import android.os.Bundle
-import android.widget.TextView
-import android.app.Activity
-
-class MainActivity : Activity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        
-        val textView = TextView(this)
-        textView.text = "Welcome to Musalla App!"
-        textView.textSize = 28f
-        textView.gravity = android.view.Gravity.CENTER
-        
-        setContentView(textView)
-    }
-}
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:allowBackup="true"
+        android:label="Musalla"
+        android:supportsRtl="true">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
