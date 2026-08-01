@@ -1,16 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <application
-        android:allowBackup="true"
-        android:label="Musalla"
-        android:supportsRtl="true">
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
-</manifest>
+package com.example.musalla
+
+import android.app.Activity
+import android.os.Bundle
+import android.graphics.Color
+import android.widget.LinearLayout
+import android.widget.TextView
+
+class MainActivity : Activity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        
+        val layout = LinearLayout(this)
+        layout.orientation = LinearLayout.VERTICAL
+        layout.setBackgroundColor(Color.parseColor("#0F766E")) // Beautiful Teal Color
+        
+        val textView = TextView(this)
+        textView.text = "Welcome to Musalla App!"
+        textView.textSize = 24f
+        textView.setTextColor(Color.WHITE)
+        textView.gravity = android.view.Gravity.CENTER
+        
+        layout.addView(textView)
+        
+        // Center the text on screen
+        layout.gravity = android.view.Gravity.CENTER
+        
+        setContentView(layout)
+    }
+}
